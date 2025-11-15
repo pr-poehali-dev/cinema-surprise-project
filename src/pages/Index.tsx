@@ -117,7 +117,7 @@ const Index = () => {
       </header>
 
       <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
-      <div className="w-full max-w-6xl">
+        <div className="w-full max-w-6xl">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             Cinema Surprise
@@ -224,7 +224,7 @@ const Index = () => {
             </CardContent>
           </Card>
         )}
-
+        </div>
       </div>
 
       <footer className="w-full border-t border-border bg-card/50 backdrop-blur-sm mt-auto">
