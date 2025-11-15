@@ -96,7 +96,27 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 md:p-8">
+    <div className="min-h-screen bg-background flex flex-col">
+      <header className="w-full border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50 animate-fade-in">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Icon name="Film" size={28} className="text-primary" />
+            <span className="text-xl md:text-2xl font-bold">Cinema Surprise</span>
+          </div>
+          <nav className="flex items-center gap-4">
+            <Button variant="ghost" size="sm">
+              <Icon name="Heart" size={18} className="mr-2" />
+              <span className="hidden md:inline">Favorites</span>
+            </Button>
+            <Button variant="ghost" size="sm">
+              <Icon name="Info" size={18} className="mr-2" />
+              <span className="hidden md:inline">About</span>
+            </Button>
+          </nav>
+        </div>
+      </header>
+
+      <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
       <div className="w-full max-w-6xl">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
@@ -205,10 +225,52 @@ const Index = () => {
           </Card>
         )}
 
-        <footer className="mt-16 text-center text-muted-foreground text-sm animate-fade-in">
-          <p>© 2025 Cinema Surprise • Made with ❤️ for movie lovers</p>
-        </footer>
       </div>
+
+      <footer className="w-full border-t border-border bg-card/50 backdrop-blur-sm mt-auto">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Icon name="Film" size={24} className="text-primary" />
+                <span className="font-bold text-lg">Cinema Surprise</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Your movie decision, made in 10 seconds. No more endless scrolling.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="font-semibold mb-3">Quick Links</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">How It Works</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="font-semibold mb-3">Connect</h3>
+              <div className="flex gap-3">
+                <Button variant="outline" size="icon" className="rounded-full">
+                  <Icon name="Twitter" size={18} />
+                </Button>
+                <Button variant="outline" size="icon" className="rounded-full">
+                  <Icon name="Github" size={18} />
+                </Button>
+                <Button variant="outline" size="icon" className="rounded-full">
+                  <Icon name="Mail" size={18} />
+                </Button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="pt-6 border-t border-border text-center text-sm text-muted-foreground">
+            <p>© 2025 Cinema Surprise • Made with ❤️ for movie lovers</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
